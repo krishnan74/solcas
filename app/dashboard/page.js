@@ -18,7 +18,7 @@ const DashBoardPage = () => {
         <WinningComponent />
       </div>
 
-      <div className="flex flex-col w-full ">
+      <div className="flex flex-col ">
         <div className="bg-[#212121] ml-5 h-[400px]">sd</div>
       </div>
     </div>

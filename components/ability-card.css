@@ -28,3 +28,17 @@
   left: -290px;
   
 }
+
+.vertical-text {
+  writing-mode: vertical-rl; /* Vertical writing mode from right to left */
+  text-orientation: upright; /* Display text upright */
+  white-space: nowrap; /* Prevent text from wrapping */
+  letter-spacing: 20px;
+
+}
+
+.power_pic_div{
+  background-image: url("../public//power.png");
+  background-size: cover;
+  background-position: center;
+}

@@ -6,42 +6,56 @@ import "./ability-card.css";
 
 const AbilityUsageComponent = () => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [showArrow, setshowArrow] = useState(true);
 
   const toggleExpansion = () => {
     setIsExpanded(!isExpanded);
   };
 
+  const toggleshowArrow = () => {
+    setshowArrow(false)
+  }
+  const toggleNotShowArrow = () => {
+    setshowArrow(true);
+  };
+
+
   return (
-    <div className="flex text-white items-center slide-left-animation">
-      <Image
-        src={"/left_arrow.png"}
-        width={"30"}
-        height={"30"}
-      >
+    <div onMouseEnter={toggleshowArrow} onMouseLeave={toggleNotShowArrow} className="flex text-white items-center slide-left-animation w-[450px] pr-5 rounded-md py-2">
+      {showArrow &&
+        <div
+          className="relative right-[60px] rounded-full w-12 h-12 power_pic_div"
 
-      </Image>
-      <div className="flex flex-col justify-around gap-5 h-full items-center">
-        <AbilityCard
-          name="Lucky Charm"
-          description="Increases the chances of spawning platinum boxes"
-          count="3"
-        />
-        <AbilityCard
-          name="Lucky Charm"
-          description="Increases the chances of spawning platinum boxes"
-          count="3"
-        />
-        <AbilityCard
-          name="Lucky Charm"
-          description="Increases the chances of spawning platinum boxes"
-          count="3"
-        />
-        <AbilityCard
-          name="Lucky Charm"
-          description="Increases the chances of spawning platinum boxes"
-          count="3"
-        />
+        ></div>
+      }
 
+      <div className="flex flex-col justify-around gap-5 h-[690px] items-center overflow-y-auto">
+        <div>
+          <p className="text-white text-2xl tracking-widest mt-20 ">
+            ABILITIES
+          </p>
+        </div>
+
+        <AbilityCard
+          name="Lucky Charm"
+          description="Increases the chances of spawning platinum boxes"
+          count="3"
+        />
+        <AbilityCard
+          name="Lucky Charm"
+          description="Increases the chances of spawning platinum boxes"
+          count="3"
+        />
+        <AbilityCard
+          name="Lucky Charm"
+          description="Increases the chances of spawning platinum boxes"
+          count="3"
+        />
+        <AbilityCard
+          name="Lucky Charm"
+          description="Increases the chances of spawning platinum boxes"
+          count="3"
+        />
       </div>
     </div>
   );

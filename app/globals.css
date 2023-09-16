@@ -2,11 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  background-color: #18181A;
+body {
+  background-color: #18181a;
   overflow-x: hidden;
-
 }
 
-*{
+/* Firefox */
+/* Track */
+* {
+  scrollbar-width: thin; /* "auto" or "none" also work */
+  scrollbar-color: #6965f2 #6965f2;
+}
+
+/* Edge */
+/* Track */
+*::-webkit-scrollbar {
+  width: 0px;
+}
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Thumb */
+*::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Thumb on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
