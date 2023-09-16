@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import "./grid-cell.css";
 import Image from "next/image";
 
@@ -10,9 +10,6 @@ const GridCell = (props) => {
     setselected(!selected);
   };
 
-  useEffect=({
-    
-  }, [selected])
   return (
     <div className="cell-container flex justify-center items-center">
       {selected ? (
