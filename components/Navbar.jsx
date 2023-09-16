@@ -7,7 +7,7 @@ const Navbar = () => {
     <div className="flex justify-between h-20 items-center ">
       <div>
         <Link href={"/"} className="text-white font-semibold tracking-widest text-xl text-center pl-8">
-          SOLSCAN
+          SOLCAS
         </Link>
       </div>
 

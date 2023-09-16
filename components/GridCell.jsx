@@ -1,15 +1,18 @@
 "use client"
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./grid-cell.css";
 import Image from "next/image";
 
-const GridCell = () => {
+const GridCell = (props) => {
   const [selected, setselected] = useState(true);
 
   const handleBuy = () => {
     setselected(!selected);
   };
 
+  useEffect=({
+    
+  }, [selected])
   return (
     <div className="cell-container flex justify-center items-center">
       {selected ? (
@@ -17,7 +20,7 @@ const GridCell = () => {
           onClick={handleBuy}
           className="flex justify-center items-center h-[80px] w-[80px] rounded-md bg-[#222224] cursor-pointer cell-animation"
         >
-          <p className="text-white font-bold text-4xl">?</p>
+          <p className="text-white font-bold text-4xl">{props.number}</p>
         </button>
       ) : (
         <button

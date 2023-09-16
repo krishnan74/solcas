@@ -4,9 +4,10 @@ import "./profile-card.css";
 
 const ProfileCard = (props) => {
   return (
-    <div className="flex px-5 py-3 bg-[rgba(0, 0, 0, 0.4)] border border-2 border-purple-500 w-1/3 rounded-md">
-      <div className="rounded-full profile-image-div">
-      </div>
+    <div className="flex px-5 py-3 bg-[rgba(0, 0, 0, 0.4)] w-1/3 rounded-md ">
+
+
+      <Image src={"/profile1.jpg"} width={"400"} height={"400"} />
 
       <div className="flex flex-col ml-5">
         <div className="flex items-end">
@@ -16,7 +17,7 @@ const ProfileCard = (props) => {
           <span
             className="text-md text-center font-light tracking-wide ml-2"
             style={{
-              backgroundImage: "linear-gradient(to right, #ff6347, #32cd32)",
+              backgroundImage: "linear-gradient(to right, #6965F2, #E649A2)",
               WebkitBackgroundClip: "text",
               color: "transparent",
             }}
@@ -26,7 +27,7 @@ const ProfileCard = (props) => {
         </div>
         <div>
           <p className="font-light text-left text-sm text-purple-500">
-            {props.role}
+            No. of participations: {props.numberOfParticipation}
           </p>
         </div>
       </div>

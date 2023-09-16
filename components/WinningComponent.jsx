@@ -1,17 +1,32 @@
 import React from "react";
 import UserStatsCard from "./UserStatsCard";
+import "./winning-component.css";
 
 const WinningComponent = (props) => {
   const cells = Array.from({ length: props.numberofWins }, (_, i) => (
-    <UserStatsCard key={i} place= "1" price= "12"/>
+    <UserStatsCard key={i} place="1" price="12" />
   ));
 
+  const cellDelays = [100, 200, 300, 400];
+
   return (
-    <div className="flex flex-col gap-1 w-fit px-8 h-fit py-6 items-center  border-2 rounded-md bg-[#222224]">
-      <p className="font-bold text-center text-4xl tracking-wide text-white">
-        Recent Winnings
+    <div className="flex flex-col gap-1 w-[] h-[190px] overflow-y-auto  bg-[#212121] rounded-md ml-5 py-5 ">
+      <p className="text-white text-2xl tracking-widest ml-5">
+        RECENT WINNINGS
       </p>
-      {cells}
+      <div className="animate-fade-in">
+        {cells.map((cell, index) => (
+          <div
+            key={index}
+            className="animate-move-up"
+            style={{
+              transitionDelay: `${cellDelays[index]}ms`,
+            }}
+          >
+            {cell}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

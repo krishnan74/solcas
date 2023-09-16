@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 const AbilityCard = (props) => {
   return (
-    <div className="flex px-5 py-3 bg-[rgba(0, 0, 0, 0.4)] border border-2 border-purple-500 w-1/3 rounded-md">
-      <div className="rounded-full profile-image-div"></div>
+    <div className="flex text-center py-9 bg-[rgba(0, 0, 0, 0.4)] border border-2 border-purple-500 w-[400px]  rounded-md">
+      <div className="rounded-full ability-image-div"></div>
 
       <div className="flex flex-col ml-5">
         <div className="flex items-end">

@@ -17,3 +17,14 @@
 .expanded {
   transform: translateX(-50%); /* Adjust the percentage as needed */
 }
+
+.slide-left-animation{
+  position: absolute;
+  left: 140px;
+  transition: .3s;
+}
+
+.slide-left-animation:hover{
+  left: -290px;
+  
+}

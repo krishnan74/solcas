@@ -1,0 +1,29 @@
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes move-up {
+  from {
+    transform: translateY(20px); /* Move down by 20px initially */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Apply the animations */
+.animate-fade-in {
+  animation: fade-in 0.5s ease-in-out;
+}
+
+.animate-move-up {
+  animation: move-up 0.5s ease-in-out;
+}
