@@ -1,0 +1,9 @@
+.profile-image-div{
+    background-image: url("../public/profile1.jpg");
+    width: 70px;
+    height: 70px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: black;
+}

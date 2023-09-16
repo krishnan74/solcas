@@ -1,0 +1,19 @@
+.profile-image-div{
+    background-image: url("../public/profile1.jpg");
+    width: 70px;
+    height: 70px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+/* Add this CSS to control the transition */
+.transition-transform {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Add this CSS to move the component to the left when expanded */
+.expanded {
+  transform: translateX(-50%); /* Adjust the percentage as needed */
+}
