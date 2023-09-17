@@ -9,13 +9,9 @@ const Page = () => {
   const [message, setMessage] = useState("Nothing");
   const circlesRef = useRef([]);
 
-
-
   const getRandomDelay = () => {
     return Math.random() * 2000 + "ms";
   };
-
-  
 
   const handleMouseMove = (event) => {
     const mouseX = event.clientX;
@@ -72,7 +68,10 @@ const Page = () => {
           </p>
           <section className="py-16">
             <div className="container mx-auto text-center">
-              <p className="text-lg text-gray-600">Solcas is a decentralized</p>
+              <p className="text-lg text-gray-600">
+                Step into the future of gambling with SolCas, a revolutionary
+                lottery game deployed on Solana
+              </p>
             </div>
           </section>
         </div>
@@ -80,13 +79,23 @@ const Page = () => {
         <div className="flex mb-10 mt-20 justify-around">
           <div className="flex flex-col w-1/2">
             <div>
-              <p className="text-7xl text-center text-[#212121] font-semibold tracking-wide">
+              <p className="text-7xl text-center text-[white] font-semibold tracking-wide">
                 How to Play?
               </p>
             </div>
 
             <div className="mt-10">
-              <p className="text-left text-1xl px-[40px] text-gray-600"></p>
+              <p className="text-left text-2xl px-[40px] text-gray-600">
+                1 ) Create Game by entering inputs such as Entry Fee, Max
+                Participants, Authority Address or Join Game using the lobby
+                code
+                <br />
+                <br></br>2 ) Select the boxes based on your intuition
+                <br />
+                <br></br>3 ) Wait for other players to Select
+                <br />
+                <br></br> 4 ) Enjoy your revealed prizes
+              </p>
             </div>
           </div>
 
@@ -102,7 +111,7 @@ const Page = () => {
 
         <div className="flex justify-center">
           <button
-            onClick={() => (window.location.href = "/web3")}
+            onClick={() => (window.location.href = "/start")}
             className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-4 py-2 rounded-lg mb-9"
           >
             Play Now!

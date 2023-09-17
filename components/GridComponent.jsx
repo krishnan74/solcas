@@ -3,7 +3,7 @@ import GridCell from "./GridCell";
 
 const GridComponent = (props) => {
   const cells = Array.from({ length: props.numberOfCells }, (_, i) => (
-    <GridCell key={i} number ={i+1} />
+    <GridCell key={i} number ={i+1} time = {props.time} />
   ));
 
   return <div className="grid grid-cols-6 gap-1 w-[600px] h-[600px] items-center">

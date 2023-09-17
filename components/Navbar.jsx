@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import WalletConnectButton from "./WalletConnectButton";
 
 const Navbar = () => {
   return (
@@ -16,15 +17,17 @@ const Navbar = () => {
 
       <div className="flex justify-around w-1/3 items-center">
         <div className="text-white">
-          <Link href={"/play"}>PLAY</Link>
+          <Link href={"/"}>HOME</Link>
         </div>
         <div className="text-white">
-          <Link href={"/dashboard"}>DASHBOARD</Link>
+          <Link href={"/start"}>PLAY</Link>
         </div>
+
         <div>
-          <button className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-4 py-2 rounded-lg ">
+          <WalletConnectButton />
+          {/* <button className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-4 py-2 rounded-lg ">
             Connect Wallet
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
