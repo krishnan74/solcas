@@ -43,22 +43,22 @@ const AbilityUsageComponent = () => {
 
         <AbilityCard
           name="Lucky Charm"
-          description="Increases the chances of spawning platinum boxes"
+          description="Increases the chances of getting platinum boxes"
           count="3"
         />
         <AbilityCard
-          name="Slow mo"
-          description="Increases the chances of spawning platinum boxes"
+          name="Slow motion"
+          description="Increases the time limit"
+          count="6"
+        />
+        <AbilityCard
+          name="Seven Lives"
+          description="Increases the number of user tries"
           count="3"
         />
         <AbilityCard
-          name="Lucky Charm"
-          description="Increases the chances of spawning platinum boxes"
-          count="3"
-        />
-        <AbilityCard
-          name="Lucky Charm"
-          description="Increases the chances of spawning platinum boxes"
+          name="Jackpot"
+          description="Doubles the prize in the selected box"
           count="3"
         />
       </div>

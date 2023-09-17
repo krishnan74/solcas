@@ -4,7 +4,7 @@ import GridComponent from "@/components/GridComponent";
 import AbilityUsageComponent from "@/components/AbilityUsageComponent";
 
 const PlayPage = () => {
-  const [timeRemaining, setTimeRemaining] = useState(15); // Initial time limit in seconds
+  const [timeRemaining, setTimeRemaining] = useState(10); // Initial time limit in seconds
 
   useEffect(() => {
     // Update the time remaining every second

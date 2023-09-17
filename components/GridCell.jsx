@@ -12,19 +12,16 @@ const GridCell = (props) => {
     setSelected(!selected);
 
     // Check a condition (you can change this condition as needed)
-    if (!hasPrize && selected) {
-      // If the condition is met, setHasPrize to true to display the prize
-      setHasPrize(true);
-    }
+    
   };
 
   useEffect(() => {
     // Set a timeout to change the content to the prize after 5 seconds (adjust as needed)
     const timeoutId = setTimeout(() => {
-      if (!hasPrize && selected) {
+      if (!hasPrize ) {
         setHasPrize(true);
       }
-    }, 5000);
+    }, props.time * 1000);
 
     // Clean up the timeout when the component unmounts
     return () => clearTimeout(timeoutId);
@@ -47,7 +44,6 @@ const GridCell = (props) => {
           className="flex justify-center items-center h-[80px] w-[80px] rounded-md bg-[#222224] cursor-pointer cell-animation"
         >
           <p className="text-white font-bold text-xl">
-            SOLD
             {hasPrize ? "4 SOL" : "SOLD"}
             </p>
         </button>
