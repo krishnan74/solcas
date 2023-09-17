@@ -48,17 +48,17 @@ const AbilityUsageComponent = () => {
         />
         <AbilityCard
           name="Slow motion"
-          description="Increases the time limit"
+          description="Increases the time limit to select the boxes"
           count="6"
         />
         <AbilityCard
           name="Seven Lives"
-          description="Increases the number of user tries"
+          description="Increases the number of times to select the boxes"
           count="3"
         />
         <AbilityCard
           name="Jackpot"
-          description="Doubles the prize in the selected box"
+          description="Doubles the solana prize in the selected box "
           count="3"
         />
       </div>
