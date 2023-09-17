@@ -1,11 +1,11 @@
-.profile-image-div{
-    background-image: url("../public/profile1.jpg");
-    width: 70px;
-    height: 70px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: black;
+.profile-image-div {
+  background-image: url("../public/profile1.jpg");
+  width: 70px;
+  height: 70px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: black;
 }
 
 /* Add this CSS to control the transition */
@@ -18,27 +18,36 @@
   transform: translateX(-50%); /* Adjust the percentage as needed */
 }
 
-.slide-left-animation{
+.slide-left-animation {
   position: absolute;
   left: 140px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
-.slide-left-animation:hover{
+.slide-left-animation:hover {
   left: -290px;
-  
 }
 
 .vertical-text {
-  writing-mode: vertical-rl; /* Vertical writing mode from right to left */
-  text-orientation: upright; /* Display text upright */
+ /* Display text upright */
   white-space: nowrap; /* Prevent text from wrapping */
-  letter-spacing: 20px;
-
+  letter-spacing: 2px;
 }
 
-.power_pic_div{
+.power_pic_div {
   background-image: url("../public//power.png");
   background-size: cover;
   background-position: center;
+}
+
+.semicircle {
+  width: 130px; /* Width of the semi-circle */
+  height: 50px; /* Half of the width, creating a semi-circle */
+  background-color: #0072e0; /* Background color of the semi-circle */
+  border-radius: 100px 100px 0 0; /* Radius values for the corners */
+  transform: rotate(-90deg);
+  position: relative;
+  scale: 3;
+  background: linear-gradient(45deg, #6366f1, #ec4899);
+  left: -40px;
 }

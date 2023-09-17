@@ -21,13 +21,18 @@ const AbilityUsageComponent = () => {
 
 
   return (
-    <div onMouseEnter={toggleshowArrow} onMouseLeave={toggleNotShowArrow} className="flex text-white items-center slide-left-animation w-[450px] pr-5 rounded-md py-2">
-      {showArrow &&
-        <div
-          className="relative right-[60px] rounded-full w-12 h-12 power_pic_div"
-
-        ></div>
-      }
+    <div
+      onMouseEnter={toggleshowArrow}
+      onMouseLeave={toggleNotShowArrow}
+      className="flex text-white items-center slide-left-animation w-[450px] pr-5 rounded-md py-2"
+    >
+      {showArrow && (
+        <div className="semicircle flex justify-center">
+          <p className="text-white text-[6px] absolute top-4  w-fit h-full overflow-hidden">
+            <span className="vertical-text ">ABILITIES</span>
+          </p>
+        </div>
+      )}
 
       <div className="flex flex-col justify-around gap-5 h-[690px] items-center overflow-y-auto">
         <div>

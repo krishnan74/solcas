@@ -7,7 +7,7 @@ const GridCell = (props) => {
   const [selected, setselected] = useState(true);
 
   const handleBuy = () => {
-    setselected(!selected);
+    setselected(!selected);w
   };
 
   return (
