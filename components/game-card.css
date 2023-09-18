@@ -1,0 +1,18 @@
+
+.full-div{
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+.full-div .game-details-div {
+  transition: transform 0.4s ease; /* Adjust the duration (0.3s) and easing function (ease) as needed */
+}
+
+.full-div:hover .game-details-div {
+  transform: translateY(-250px); /* Adjust the value (-20px) as needed */
+}
+
+@keyframes size {
+    
+}
