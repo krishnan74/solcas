@@ -23,33 +23,31 @@ const JoinGameForm = () => {
   };
 
   return (
-    <div>
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col gap-4 text-xl text-white items-center"
-      >
-        <div>
-          <label htmlFor="entryFee" className="mr-[20px]">
-            Lobby Code
-          </label>
-          <input
-            type="number"
-            className="bg-[#121212] border border-white focus:border-purple-500 rounded-md py-1 text-white"
-            id="entryFee"
-            value={roomNumber}
-            onChange={(e) => setRoomNumber(e.target.value)}
-            required
-          />
-        </div>
+    <form
+      onSubmit={handleSubmit}
+      className="flex flex-col gap-4 sm:text-xl text-md text-white items-center "
+    >
+      <div className="flex flex-col justify-center ">
+        <label htmlFor="entryFee" className="mr-[20px]">
+          Lobby Code: 
+        </label>
+        <input
+          type="number"
+          className="bg-[#121212] border border-white focus:border-purple-500 rounded-md py-1 text-white"
+          id="entryFee"
+          value={roomNumber}
+          onChange={(e) => setRoomNumber(e.target.value)}
+          required
+        />
+      </div>
 
-        <button
-          type="submit"
-          className="mt-5 border-2 border-purple-500 px-3 py-1 rounded-md"
-        >
-          Join
-        </button>
-      </form>
-    </div>
+      <button
+        type="submit"
+        className="mt-5 border-2 border-purple-500 px-3 py-1 rounded-md"
+      >
+        Join
+      </button>
+    </form>
   );
 };
 

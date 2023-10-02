@@ -15,6 +15,8 @@ const GamePage = () => {
           hoursLeft="1"
           imageUrl="/nft1.jpeg"
           title="GameHub"
+          username= "Imperius"
+          userImage= "/solana.png"
         />
         <GameCard
           entries="5"

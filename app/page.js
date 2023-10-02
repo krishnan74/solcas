@@ -1,62 +1,29 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-
-import "../app/globals.css";
-
+import GameCard from "@/components/GameCard";
 import Image from "next/image";
 
 const Page = () => {
   const [message, setMessage] = useState("Nothing");
   const circlesRef = useRef([]);
 
-  const getRandomDelay = () => {
-    return Math.random() * 2000 + "ms";
-  };
-
-  const handleMouseMove = (event) => {
-    const mouseX = event.clientX;
-    const mouseY = event.clientY;
-
-    circlesRef.current.forEach((circle) => {
-      const circleRect = circle.getBoundingClientRect();
-      const circleX = circleRect.left + circleRect.width / 2;
-      const circleY = circleRect.top + circleRect.height / 2;
-
-      const deltaX = mouseX - circleX;
-      const deltaY = mouseY - circleY;
-
-      const distance = Math.sqrt(deltaX ** 2 + deltaY ** 2);
-      const maxDistance = 150;
-
-      if (distance < maxDistance) {
-        circle.style.transition = "transform 0.5s ease";
-        circle.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
-      } else {
-        circle.style.transition = "transform 0.5s ease";
-        circle.style.transform = "translate(0, 0)";
-      }
-    });
-  };
-
   return (
     <>
-      <div className="relative" onMouseMove={handleMouseMove}>
-        <div className="z-10">
-          <p className="text-7xl text-center text-white font-semibold mt-32 tracking-wide">
-            Decentralized
-          </p>
+      <div className="relative">
+        <div className="">
+          <div className="px-2">
+            <p className="text-5xl sm:text-6xl md:text-7xl text-center text-white font-semibold mt-20 md:mt-32 tracking-wide">
+              Decentralized
+            </p>
 
-          <p className="text-7xl text-center font-semibold text-[#E649A2] tracking-wide">
-            Gaming Redefined
-          </p>
-
-          {/* <p className="text-7xl text-center  text-[#212121] font-semibold tracking-wide">
-            AI - Assisted
-          </p> */}
-          <p className="text-2xl text-center text-[#4d4d4d] font-semibold mt-4 tracking-wide">
+            <p className="text-5xl sm:text-6xl md:text-7xl text-center font-semibold text-[#E649A2] tracking-wide">
+              Gaming Redefined
+            </p>
+          </div>
+          <p className="text-xl sm:text-2xl text-center text-[#4d4d4d] font-semibold mt-4 tracking-wide">
             Made on{" "}
             <span
-              className="text-2xl text-center font-semibold tracking-wide"
+              className="text-xl sm:text-2xl text-center font-semibold tracking-wide"
               style={{
                 backgroundImage: "linear-gradient(to right, #6965F2, #E649A2)",
                 WebkitBackgroundClip: "text",
@@ -66,9 +33,9 @@ const Page = () => {
               Solana
             </span>
           </p>
-          <section className="py-16">
+          <section className="py-8 md:py-16">
             <div className="container mx-auto text-center">
-              <p className="text-lg text-gray-600">
+              <p className="text-lg sm:text-xl text-gray-600 px-3">
                 Step into the future of gambling with SolCas, a revolutionary
                 lottery game deployed on Solana
               </p>
@@ -76,8 +43,91 @@ const Page = () => {
           </section>
         </div>
 
-        <div className="flex mb-10 mt-20 justify-around">
-          <div className="flex flex-col w-1/2">
+        <div className="mb-5">
+          <p className="text-2xl sm:text-3xl md:text-4xl text-white font-semibold mb-4 sm:mb-5 md:mb-6 ml-4 sm:ml-8">
+            Trending Games
+          </p>
+          <div className="pl-4 sm:pl-8 gap-4 sm:gap-6 flex items-center overflow-x-auto">
+            <GameCard
+              entries="5"
+              solInPool="35"
+              usersLeft="7"
+              hoursLeft="1"
+              imageUrl="/nft1.jpeg"
+              title="GameHub"
+              username="Imperius"
+              userImage="/solana.png"
+            />
+            <GameCard
+              entries="5"
+              solInPool="35"
+              usersLeft="7"
+              hoursLeft="1"
+              imageUrl="/nft1.jpeg"
+              title="GameHub"
+              username="Imperius"
+              userImage="/solana.png"
+            />
+            <GameCard
+              entries="5"
+              solInPool="35"
+              usersLeft="7"
+              hoursLeft="1"
+              imageUrl="/nft1.jpeg"
+              title="GameHub"
+              username="Imperius"
+              userImage="/solana.png"
+            />
+            <GameCard
+              entries="5"
+              solInPool="35"
+              usersLeft="7"
+              hoursLeft="1"
+              imageUrl="/nft1.jpeg"
+              title="GameHub"
+              username="Imperius"
+              userImage="/solana.png"
+            />
+            <GameCard
+              entries="5"
+              solInPool="35"
+              usersLeft="7"
+              hoursLeft="1"
+              imageUrl="/nft1.jpeg"
+              title="GameHub"
+              username="Imperius"
+              userImage="/solana.png"
+            />
+            <GameCard
+              entries="5"
+              solInPool="35"
+              usersLeft="7"
+              hoursLeft="1"
+              imageUrl="/nft1.jpeg"
+              title="GameHub"
+              username="Imperius"
+              userImage="/solana.png"
+            />
+          </div>
+        </div>
+
+        <div className="flex justify-center">
+          <button
+            onClick={() => (window.location.href = "/start")}
+            className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-4 py-2 rounded-lg mb-10 sm:mb-20"
+          >
+            Get Started!
+          </button>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Page;
+
+{
+  /* <div className="flex flex-col w-1/2">
             <div>
               <p className="text-7xl text-center text-[white] font-semibold tracking-wide">
                 How to Play?
@@ -106,20 +156,5 @@ const Page = () => {
               width={"900"}
               className="border-2  p-5 rounded-lg"
             />
-          </div>
-        </div>
-
-        <div className="flex justify-center">
-          <button
-            onClick={() => (window.location.href = "/start")}
-            className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-4 py-2 rounded-lg mb-9"
-          >
-            Play Now!
-          </button>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default Page;
+          </div> */
+}

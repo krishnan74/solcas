@@ -7,7 +7,7 @@ import entryW from "../app/assets/entry_white.png";
 import "./game-card.css";
 
 const GameCard = (props) => {
-  const { entries, solInPool, usersLeft, hoursLeft, imageUrl, title } = props;
+  const { entries, solInPool, usersLeft, hoursLeft, imageUrl, title, username, userImage } = props;
   const [showDetails, setShowDetails] = useState(false);
 
   const toggleshowDetails = () => {
@@ -23,6 +23,15 @@ const GameCard = (props) => {
       onMouseLeave={toggleNotShowDetails}
       className="border rounded-lg flex-shrink-0 shadow-md w-fit h-[340px] overflow-hidden full-div transition-transform transform-gpu "
     >
+      <div className="absolute top-2 right-2 z-10 flex items-center space-x-2 ">
+        <span className="text-white font-semibold text-sm">{username}</span>
+        <img
+          src={userImage}
+          alt={`${username}'s profile`}
+          className="w-8 h-8 rounded-full"
+        />
+      </div>
+
       <div className="game-image-div">
         <Image src={imageUrl} width={"250"} height={"250"} />
       </div>
@@ -31,7 +40,11 @@ const GameCard = (props) => {
         className="game-details-div
          px-5 w-[250px] border-t-1  rounded-lg bg-[#18181a]  "
       >
-        <h2 className="text-2xl font-semibold text-white mt-3">{title}</h2>
+        {!showDetails && (
+          
+          <h2 className="text-2xl font-semibold text-white mt-3">{title}</h2>
+        )}
+
         {!showDetails ? (
           <div className="flex justify-around py-2 mb-2 h-[36px]">
             <div className="flex items-center">
@@ -53,7 +66,7 @@ const GameCard = (props) => {
           </div>
         ) : (
           <div>
-            <div className="flex justify-around py-2 mb-2 h-[36px]">
+            <div className="flex justify-around py-2  h-[36px] mt-11">
               <div className="flex items-center">
                 <Image src={"/entry.png"} height={"20"} width={"20"}></Image>
                 <p className="ml-2 text-md text-white">{entries}</p>
