@@ -20,7 +20,7 @@
 
 .slide-left-animation {
   position: absolute;
-  left: 140px;
+  left: 100;
   transition: 0.3s;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .vertical-text {
- /* Display text upright */
+  /* Display text upright */
   white-space: nowrap; /* Prevent text from wrapping */
   letter-spacing: 2px;
 }
